@@ -1,4 +1,5 @@
-import Specials from './Specials/Specials';
+import Testimonials from './Testimonials';
+import Specials from './Specials';
 import Hero from './Hero';
 import './Main.css';
 
@@ -7,6 +8,7 @@ export default function Main() {
     <main>
       <Hero />
       <Specials />
+      <Testimonials />
     </main>
   )
 }
