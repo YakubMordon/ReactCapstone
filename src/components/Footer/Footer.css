@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-img{
+    width: 120px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.footer-category-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+

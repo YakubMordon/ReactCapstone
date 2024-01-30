@@ -1,0 +1,30 @@
+/* Nav.css */
+
+nav {
+    padding: 10px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+a:hover {
+    cursor: pointer;
+    background-color: #878787;
+}
