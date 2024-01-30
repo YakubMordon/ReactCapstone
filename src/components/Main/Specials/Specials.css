@@ -1,0 +1,45 @@
+.specials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+.specials-header-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 175px;
+}
+
+.specials-header {
+    color: black;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.specials-header-button {
+    height: 45px;
+    width: 150px;
+    background-color: #f4ce14;
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+    border-width: 0;
+    border-radius: 12.5px;
+}
+
+.specials-header-button :hover {
+    background-color: #ba9f17;
+}
+
+.specials-list-container {
+    display: flex;
+    height: auto;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-direction: row;
+}

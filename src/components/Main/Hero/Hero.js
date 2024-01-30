@@ -3,7 +3,7 @@ import './Hero.css';
 
 export default function Hero() {
   return (
-    <div className='container'>
+    <div className='hero-container'>
       <div className='hero-text-container'>
         <h1 className='hero-header'>Little Lemon</h1>
         <h3 className='hero-location'>Chicago</h3>
