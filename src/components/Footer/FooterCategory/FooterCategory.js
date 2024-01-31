@@ -8,7 +8,7 @@ export default function FooterCategory({header, categories}) {
             <p className='category-header'>{header}</p>
         </div>
         <div className='category-body'> 
-            <ul className='category-list-container'>
+            <ul className='category-list-container' aria-label="On Click">
                 {categories.map((category, index) => <li key={index} className='category-list-item'>
                     <a>{category}</a>
                 </li>)}

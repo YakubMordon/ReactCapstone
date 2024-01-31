@@ -10,7 +10,7 @@ export default function Item({name, description, price, imageUrl}) {
                 <p className="item-priceText">${price}</p>
             </div>
             <p className="item-descriptionText">{description}</p>
-            <p className="item-delivery">Order a delivery</p>
+            <p className="item-delivery" aria-label="On Click">Order a delivery</p>
         </div>
     </div>
   )

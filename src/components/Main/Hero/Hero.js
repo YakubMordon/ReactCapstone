@@ -16,7 +16,7 @@ export default function Hero() {
           recipes served with a modern
           twist.
         </p>
-        <button className='hero-button' onClick={() => navigate('/booking')}>
+        <button className='hero-button' onClick={() => navigate('/booking')} aria-label="On Click">
           Reserve a Table
         </button>
       </div>

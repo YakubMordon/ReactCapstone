@@ -30,7 +30,7 @@ export default function Booking({availableTimes}) {
             <option>Anniversary</option>
         </select>
 
-        <input type="submit" value="Make Your Reservation" disabled={!isDateValid}/>
+        <input aria-label="On Click" type="submit" value="Make Your Reservation" disabled={!isDateValid}/>
     </form>
   )
 }

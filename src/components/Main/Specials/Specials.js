@@ -30,7 +30,7 @@ export default function Specials() {
                 <h3 className="specials-header">Specials</h3>
             </div>
             <div>
-                <button className="specials-header-button">Online Menu</button>
+                <button className="specials-header-button" aria-label="On Click">Online Menu</button>
             </div>
         </div>
         <div className="specials-list-container">
