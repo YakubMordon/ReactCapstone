@@ -28,3 +28,15 @@ a:hover {
     cursor: pointer;
     background-color: #878787;
 }
+
+@media screen and (max-width: 600px) {
+    .navigation-list {
+        flex-direction: column;
+    }
+
+    .navigation-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -3,9 +3,12 @@
 .category-container {
   height: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: column;
+}
+
+.category-header-container {
+  text-align: center;
 }
 
 .category-header {
@@ -20,9 +23,15 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 5px;
   margin: 0;
   padding: 0;
+}
+
+.category-list-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 li {
@@ -39,4 +48,14 @@ a {
 a:hover {
   cursor: pointer;
   background-color: #878787;
+}
+
+@media screen and (max-width: 600px) {
+  .category-list-container {
+    height: auto;
+  }
+
+  .category-container {
+    margin-bottom: 40px;
+  }
 }

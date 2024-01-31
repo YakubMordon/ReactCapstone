@@ -44,3 +44,9 @@
     gap: 50px;
     flex-direction: row;
 }
+
+@media screen and (max-width: 600px) {
+    .specials-list-container {
+        flex-direction: column;
+    }
+}

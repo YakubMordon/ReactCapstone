@@ -23,6 +23,7 @@
 }
 
 .hero-description {
+    margin-top: 5px;
     width: 175px;
     font-weight: 600;
 }
@@ -36,6 +37,7 @@
     font-size: 16px;
     border-width: 0;
     border-radius: 25px;
+    margin-top: 5px;
 }
 
 .hero-button :hover {

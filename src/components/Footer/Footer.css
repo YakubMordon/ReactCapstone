@@ -13,9 +13,22 @@ footer {
 }
 
 .footer-category-container {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
+@media screen and (max-width: 600px) {
+  footer {
+    margin-top: 40px;
+    height: auto !important;
+    flex-direction: column;
+    justify-content: normal;
+  }
+
+  .footer-category-container {
+    flex-direction: column;
+  }
+}

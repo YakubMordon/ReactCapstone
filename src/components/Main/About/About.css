@@ -59,3 +59,16 @@
     margin-top: -50px;
     margin-left: -50px;
 }
+
+@media screen and (max-width: 600px) {
+    .about-container {
+        height: 100%;
+        flex-direction: column;
+        margin: 40px 0;
+    }
+
+    .about-info {
+        margin-top: 40px;
+        margin-bottom: 90px;
+    }
+}

@@ -9,7 +9,7 @@ export default function FooterCategory({header, categories}) {
         </div>
         <div className='category-body'> 
             <ul className='category-list-container'>
-                {categories.map((category, index) => <li key={index}>
+                {categories.map((category, index) => <li key={index} className='category-list-item'>
                     <a>{category}</a>
                 </li>)}
             </ul>
