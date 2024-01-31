@@ -12,20 +12,20 @@ export default function Booking({availableTimes}) {
   return (
     <form className="reservation-form">
         <label htmlFor="res-date">* Choose date</label>
-        <input type="date" id="res-date" value={date} onChange={(e) => setDate(e.target.value)}/>
+        <input type="date" id="res-date" value={date} onChange={(e) => setDate(e.target.value)} required={true}/>
         {!isDateValid && <div className='error'>Date is required</div>}
 
         <label htmlFor="res-time">* Choose time</label>
-        <select id="res-time" value={reservationTime} onChange={(e) => setReservationTime(e.target.value)}>
+        <select id="res-time" value={reservationTime} onChange={(e) => setReservationTime(e.target.value)} required={true}>
             {availableTimes.map(value => <option>{value}</option>)}
         </select>
 
         <label htmlFor="guests">* Number of guests</label>
-        <input type="range" min="1" max="10" id="guests" value={guestsNumber} onChange={(e) => setGuestsNumber(e.target.value)}/>
+        <input type="range" min="1" max="10" id="guests" value={guestsNumber} onChange={(e) => setGuestsNumber(e.target.value)} required={true}/>
         <output className='guestsOutput' htmlFor="guests">{guestsNumber}</output>
 
         <label htmlFor="occasion">* Occasion</label>
-        <select id="occasion" value={occasion} onChange={(e) => setOccassion(e.target.value)}>
+        <select id="occasion" value={occasion} onChange={(e) => setOccassion(e.target.value)} required={true}>
             <option>Birthday</option>
             <option>Anniversary</option>
         </select>
