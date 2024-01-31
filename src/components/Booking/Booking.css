@@ -1,0 +1,120 @@
+/* ReservationForm.css */
+
+.reservation-form {
+    display: grid;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.reservation-form label,
+.reservation-form select,
+.reservation-form input,
+.reservation-form output {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.reservation-form input[type="date"] {
+    width: 95%;
+    max-width: 95%;
+}
+
+.error {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+}
+
+.reservation-form input[type="range"] {
+    -webkit-appearance: none;
+    width: 95%;
+    max-width: 95%;
+    background: #ddd;
+    border-radius: 5px;
+}
+
+.reservation-form input[type="range"]:focus {
+    outline: none;
+}
+
+.reservation-form input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.reservation-form input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #4caf50;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.guestsOutput {
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+}
+
+.reservation-form input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.reservation-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.reservation-form input[type="submit"]:disabled {
+    background-color: #b5b5b5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    .reservation-form {
+      max-width: 100%;
+    }
+
+    .reservation-form label,
+    .reservation-form select,
+    .reservation-form input,
+    .reservation-form output {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .reservation-form input[type="date"] {
+        width: 90%;
+        max-width: 90%;
+    }
+
+    .reservation-form input[type="range"] {
+        width: 90%;
+        max-width: 90%;
+    }
+}

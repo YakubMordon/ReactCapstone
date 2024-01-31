@@ -1,7 +1,9 @@
-import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <div className='hero-container'>
       <div className='hero-text-container'>
@@ -14,7 +16,7 @@ export default function Hero() {
           recipes served with a modern
           twist.
         </p>
-        <button className='hero-button'>
+        <button className='hero-button' onClick={() => navigate('/booking')}>
           Reserve a Table
         </button>
       </div>
