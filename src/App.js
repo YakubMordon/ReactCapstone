@@ -1,5 +1,5 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import { useReducer } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { useReducer, useEffect } from 'react';
 import Booking from './components/Booking';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -9,29 +9,49 @@ import './App.css';
 export const availableTimesReducer = (state, action) => {
   switch (action.type) {
     case 'UPDATE_TIMES':
-      return ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00'];
+      return action.payload.availableTimes;
 
     default:
       return state;
   }
 };
 
-export const updateTimes = (selectedDate) => ({ type: 'UPDATE_TIMES', payload: { selectedDate } });
+export const updateTimes = (selectedDate, availableTimes) => ({
+  type: 'UPDATE_TIMES',
+  payload: { selectedDate, availableTimes },
+});
 
 function App() {
   const [availableTimes, dispatch] = useReducer(availableTimesReducer, []);
 
-  const initializeTimes = () => {
-    dispatch(updateTimes());
+  const initializeTimes = async () => {
+    const today = new Date();
+    const formattedDate = today.toISOString().split('T')[0]; 
+
+    try {
+      const times = await fetchAPI(formattedDate);
+      dispatch(updateTimes(formattedDate, times));
+    } catch (error) {
+      console.error('Error fetching available times:', error);
+    }
   };
-  
+
+  useEffect(() => {
+    initializeTimes();
+  }, []);
 
   return (
     <Router>
       <Header />
       <Routes>
-        <Route path='/' element={<Main initializeTimes={initializeTimes} />} />
-        <Route path='/booking' element={<Booking availableTimes={availableTimes} dispatch={dispatch}/>} />
+        <Route
+          path='/'
+          element={<Main initializeTimes={initializeTimes} />}
+        />
+        <Route
+          path='/booking'
+          element={<Booking availableTimes={availableTimes} dispatch={dispatch} />}
+        />
       </Routes>
       <Footer />
     </Router>
