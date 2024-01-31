@@ -38,6 +38,7 @@
     border-width: 0;
     border-radius: 25px;
     margin-top: 5px;
+    cursor: pointer;
 }
 
 .hero-button :hover {

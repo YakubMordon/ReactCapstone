@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './Booking.css';
 
-export default function Booking() {
+export default function Booking({availableTimes}) {
   const [date, setDate] = useState('');
-  const [reservationTime, setReservationTime] = useState('17:00');
+  const [reservationTime, setReservationTime] = useState(availableTimes[0]);
   const [guestsNumber, setGuestsNumber] = useState('1');
   const [occasion, setOccassion] = useState('Birthday');
 
@@ -17,12 +17,7 @@ export default function Booking() {
 
         <label htmlFor="res-time">* Choose time</label>
         <select id="res-time" value={reservationTime} onChange={(e) => setReservationTime(e.target.value)}>
-            <option>17:00</option>
-            <option>18:00</option>
-            <option>19:00</option>
-            <option>20:00</option>
-            <option>21:00</option>
-            <option>22:00</option>
+            {availableTimes.map(value => <option>{value}</option>)}
         </select>
 
         <label htmlFor="guests">* Number of guests</label>
