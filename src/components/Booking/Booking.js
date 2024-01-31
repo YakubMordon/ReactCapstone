@@ -17,7 +17,7 @@ export default function Booking({availableTimes}) {
 
         <label htmlFor="res-time">* Choose time</label>
         <select id="res-time" value={reservationTime} onChange={(e) => setReservationTime(e.target.value)} required={true}>
-            {availableTimes.map(value => <option>{value}</option>)}
+            {availableTimes.map(value => <option key={value}>{value}</option>)}
         </select>
 
         <label htmlFor="guests">* Number of guests</label>
